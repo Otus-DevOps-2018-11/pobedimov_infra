@@ -3,7 +3,7 @@
 # Update APT
 sudo apt update
 # Install Ruby and Bundler
-sudo apt install -y ruby-ful ruby-bundler build-essential
+sudo apt install -y ruby-full ruby-bundler build-essential
 
 # Check Ruby and Bundler correct install
 #echo "Ruby has been installed"
