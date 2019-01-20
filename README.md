@@ -11,3 +11,8 @@ someinternalhost_IP = 10.132.0.3
 testapp_IP = 35.210.175.203  
 testapp_port = 9292  
   
+### ДЗ занятия №7 - Практика сборки образов VM при помощи Packer  
+Установлен Packer, описан шаблон ubuntu16.json, протестирова сборка образа  
+Параметризированы  ID проекта, source_image_family, machine_type, image_description, disk_size, disk_type, tags  
+в файле variables.json  
+в качестве примера описания переменных в репозитории файл variables.json.example  
