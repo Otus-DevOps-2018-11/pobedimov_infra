@@ -16,3 +16,10 @@ testapp_port = 9292
 Параметризированы  ID проекта, source_image_family, machine_type, image_description, disk_size, disk_type, tags  
 в файле variables.json  
 в качестве примера описания переменных в репозитории файл variables.json.example  
+  
+### ДЗ занятия №8 - Практика IaC с использованием Terraform  
+Установлен и инициализирован Terraform, опеределён Provider для подключения к GCP,  
+изучено добавление и изменение ресурсов, опредлелены Provisioners и input переменные  
+в качестве примере описания переменных в репозитории файл terraform.tfvars.example  
+
+ 
