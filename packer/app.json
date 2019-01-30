@@ -2,7 +2,9 @@
     "variables": {
         "project_id": null,
         "source_image_family": null,
-        "machine_type": null
+        "machine_type": null,
+	"disk_size": null,
+	"disk_type": null
     },
 
     "builders": [
@@ -15,16 +17,19 @@
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
             "machine_type": "{{user `machine_type`}}",
-            "image_description": "{{user `image_description`}}",
+            "image_description": "Reddit App Image",
             "disk_size": "{{user `disk_size`}}",
             "disk_type": "{{user `disk_type`}}",
             "tags": "reddit-app"
         }
     ],
+
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/install_ruby.sh",
+            "scripts": [
+               "scripts/install_ruby.sh"
+	    ],
             "execute_command": "sudo {{.Path}}"
         }
     ]
