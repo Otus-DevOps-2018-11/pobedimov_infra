@@ -1,6 +1,6 @@
 variable project {
   description = "Project ID"
-  default     = "infra-2279**"
+  default     = "infra-227900"
 }
 
 variable region {
@@ -16,3 +16,4 @@ variable zone {
 #variable public_key_path {
 #  description = "Path to the public key used for ssh access"  
 #}
+
