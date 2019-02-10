@@ -35,3 +35,34 @@ testapp_port = 9292
 выполнить terraform init  
 выполнить terraform apply  
  
+### ДЗ занятия 10 - Управление конфигурацией Ansible-1  
+  
+В процессе сделано:
+* Установлен Ansible  
+* Созданы файлы Inventoy (inventory и inventory.yml)  
+* Создан файл ansible.cfg с описанием конфигурации по умолчанию  
+* Протестирована работа с группами хостов  
+* Рассмотрены варианты выполнения команд через command и shell и различия возврата команд  
+* Описан Playbook clone.yml который клонирует приложение  
+````
+---
+- name: Clone
+  hosts: app
+  tasks:
+    - name: Clone repo
+      git:
+        repo: https://github.com/express42/reddit.git
+        dest: /home/appuser/reddit
+````  
+  
+результат первого выполнения  
+````
+PLAY RECAP ************************************************************************
+appserver                  : ok=2    changed=0    unreachable=0    failed=0  
+````
+после удаления существующего каталога с приложением
+````
+PLAY RECAP ************************************************************************
+appserver                  : ok=2    changed=1    unreachable=0    failed=0
+````  
+  
