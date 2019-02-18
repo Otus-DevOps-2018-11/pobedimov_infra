@@ -1,7 +1,7 @@
 ---
 - name: Install Ruby and Bundler
   hosts: all
-  become: true
+  become_method: 'sudo'
 
   tasks:
   - name: Install ruby and rubygems
