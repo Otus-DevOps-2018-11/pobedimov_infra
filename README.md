@@ -66,3 +66,13 @@ PLAY RECAP *********************************************************************
 appserver                  : ok=2    changed=1    unreachable=0    failed=0
 ````  
   
+### ДЗ занятия 11 - Ansible-2, templates, handlers, tags
+
+В процессе сделано:  
+* Создан playbook для приложения и БД  
+* Добавлены tags к задачам playbook-ов  
+* Установил переменные  
+* Мультизадачный Playbook разделён на несколько playbook-ов app.yml, db.yml, site.yml  
+* Заменил провиженеры в Packer c shell скриптов на playbook-и Ansible  
+  
+
