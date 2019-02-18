@@ -21,6 +21,7 @@
             "tags": "{{user `tags`}}"
         }
     ],
+
     "provisioners": [
         {
             "type": "ansible",
