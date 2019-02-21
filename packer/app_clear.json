@@ -22,13 +22,6 @@
             "disk_type": "{{user `disk_type`}}",
             "tags": "reddit-app"
         }
-    ],
-
-    "provisioners": [
-        {
-            "type": "ansible",
-            "playbook_file": "ansible/packer_app.yml"
-        }
     ]
 }
 

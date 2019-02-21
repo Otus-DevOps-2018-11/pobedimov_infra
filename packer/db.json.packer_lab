@@ -2,33 +2,30 @@
     "variables": {
         "project_id": null,
         "source_image_family": null,
-        "machine_type": null,
-	"disk_size": null,
-	"disk_type": null
+        "machine_type": null
     },
 
     "builders": [
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-app-{{timestamp}}",
+            "image_name": "reddit-db-{{timestamp}}",
             "image_family": "reddit-app-base",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
             "machine_type": "{{user `machine_type`}}",
-            "image_description": "Reddit App Image",
+            "image_description": "{{user `image_description`}}",
             "disk_size": "{{user `disk_size`}}",
             "disk_type": "{{user `disk_type`}}",
-            "tags": "reddit-app"
+            "tags": "{{user `tags`}}"
         }
     ],
-
     "provisioners": [
         {
-            "type": "ansible",
-            "playbook_file": "ansible/packer_app.yml"
+            "type": "shell",
+            "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
         }
     ]
 }
-
