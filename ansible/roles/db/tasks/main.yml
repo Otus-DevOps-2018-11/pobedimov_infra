@@ -7,3 +7,5 @@
     mode: 0644
   notify: restart mongod
 
+- name: Show info about the env this host belong to
+  debug: msg="This host is in {{ env }} enviroment!"

@@ -76,3 +76,11 @@ appserver                  : ok=2    changed=1    unreachable=0    failed=0
 * Заменил провиженеры в Packer c shell скриптов на playbook-и Ansible  
   
 
+### ДЗ занятия 12 - Ansible-3, роли, управление настройками к нескольким окружениям  
+  
+В процессе сделано:  
+* Созданы роли Ansible  
+* Описаны два окружение stage и prod  
+* Настроена роль jdauphant.nginx из коммьюнити Ansible Galaxy для обратного проксирование приложения  
+* Создан playbook users.yml для создания пользователей с использованием Ansible Vault   
+  
